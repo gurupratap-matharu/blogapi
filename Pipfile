@@ -11,6 +11,7 @@ pylint-django = "*"
 [packages]
 django = "==3.1"
 factory-boy = "*"
+djangorestframework = "*"
 
 [requires]
 python_version = "3.8"
