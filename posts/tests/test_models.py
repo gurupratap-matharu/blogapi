@@ -1,24 +1,17 @@
 from django.contrib.auth.models import User
 from django.test import TestCase
-
 from posts.models import Post
+from posts.tests.factories import PostFactory, UserFactory
 
 
 class PostTests(TestCase):
 
     def setUp(self):
-        self.user = User.objects.create_user(
-            username='testuser',
-            password='testpass123'
-        )
-        self.post = Post.objects.create(
-            author=self.user,
-            title='Life is beautiful',
-            body='Live life each day as it comes'
-        )
+        self.user = UserFactory()
+        self.post = PostFactory(author=self.user)
 
     def test_blog_content(self):
         post = Post.objects.get(id=1)
-        self.assertEqual(f'{post.author}', 'testuser')
-        self.assertEqual(f'{post.title}', 'Life is beautiful')
-        self.assertEqual(f'{post.body}', 'Live life each day as it comes')
+        self.assertEqual(f'{post.author}', self.user.username)
+        self.assertEqual(f'{post.title}', self.post.title)
+        self.assertEqual(f'{post.body}', self.post.body)
