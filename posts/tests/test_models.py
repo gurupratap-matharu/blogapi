@@ -3,6 +3,9 @@ from django.test import TestCase
 from posts.models import Post
 from posts.tests.factories import PostFactory, UserFactory
 
+for i in range(100):
+    print(i)
+
 
 class PostTests(TestCase):
 
