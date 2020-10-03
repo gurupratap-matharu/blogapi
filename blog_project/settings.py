@@ -53,7 +53,6 @@ INSTALLED_APPS = [
     'django_extensions',
     'crispy_forms',
 
-
     # Local
     'users.apps.UsersConfig',
     'posts.apps.PostsConfig',
@@ -199,7 +198,7 @@ LOGGING = {
         },
     },
     'loggers': {
-        'main': {
+        'blog_project': {
             'handlers': ['console'],
             'level': 'DEBUG',
             'propagate': True,
