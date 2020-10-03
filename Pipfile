@@ -20,6 +20,8 @@ djangorestframework = "==3.11"
 dj-database-url = "*"
 django-extensions = "*"
 django-crispy-forms = "*"
+gunicorn = "*"
+whitenoise = "*"
 
 [requires]
 python_version = "3.8"
