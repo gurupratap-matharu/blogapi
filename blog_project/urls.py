@@ -38,6 +38,8 @@ schema_view = get_schema_view(
 
 urlpatterns = [
     path('dj-admin/', admin.site.urls),
+    path('accounts/', include('allauth.urls')),
+    path('profile/', include('users.urls')),
     path('', include('pages.urls')),
     path('api/v1/', include('posts.urls')),
     path('api-auth/', include('rest_framework.urls')),

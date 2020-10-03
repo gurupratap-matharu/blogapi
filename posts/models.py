@@ -1,9 +1,9 @@
-from django.contrib.auth.models import User
+from django.contrib.auth import get_user_model
 from django.db import models
 
 
 class Post(models.Model):
-    author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='posts')
+    author = models.ForeignKey(get_user_model(), on_delete=models.CASCADE, related_name='posts')
     title = models.CharField(max_length=50)
     body = models.TextField()
 
