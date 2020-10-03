@@ -17,6 +17,9 @@ coreapi = "==2.3.3"
 pyyaml = "==5.1.2"
 drf-yasg = {extras = ["validation"], version = "*"}
 djangorestframework = "==3.11"
+dj-database-url = "*"
+django-extensions = "*"
+django-crispy-forms = "*"
 
 [requires]
 python_version = "3.8"
